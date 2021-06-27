@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   name: helloworld-controller
   labels:
-    app:helloworld
+    app: helloworld
 spec:
   replicas: 4
   selector:
