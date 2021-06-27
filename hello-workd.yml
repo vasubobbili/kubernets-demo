@@ -3,7 +3,7 @@ kind: Pod
 metada:
   name: nodehelloword.example.com
   label:
-    app: helloworld
+    app: helloworkd
    spec:
      containers:
      - name: k8s-demo
