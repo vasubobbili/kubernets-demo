@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metada:
   name: nodehelloword.example.com
-  labels:
+  label:
     app: helloworld
    spec:
      containers:
