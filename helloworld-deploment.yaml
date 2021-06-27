@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        apps: helloworld
+        app: helloworld
      spec:
        containers:
          - name: k8s-demo
