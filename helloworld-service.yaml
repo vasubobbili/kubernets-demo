@@ -10,5 +10,5 @@ spec:
     protocol: TCP
   selector:
     app: helloworld
-  type: NodePort
+  type: LoadBalancer
     
