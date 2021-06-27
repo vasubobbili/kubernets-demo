@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: helloworld-deployment
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: helloworld
@@ -11,10 +11,10 @@ spec:
     metadata:
       labels:
         app: helloworld
-     spec:
-       containers:
-         - name: k8s-demo
-           image: arjunachari12/k8s-demo
-           ports:
-             - name: nodejs-ports
-               containerPort: 3000
+    spec:
+      containers:
+        - name: k8s-demo
+          image: arjunachari12/k8s-demo
+          ports:
+            - name: nodejs-port
+              containerPort: 3000
