@@ -8,7 +8,7 @@ spec:
   storageClassName: manual
   capacity:
     storage: 10Gi
-  acessModes:
+  accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/mnt/dta"
+    path: "/mnt/data"
