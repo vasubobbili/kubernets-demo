@@ -1,7 +1,7 @@
 --- 
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata: xyz
   annotations: 
     deployment.kubernetes.io/revision: "1"
   labels: 
