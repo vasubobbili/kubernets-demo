@@ -3,8 +3,8 @@ kind: ConfigMap
 kind: Pod
 data: 
   data1: 761
-  data2: value"
+  data2: "value"
   data3: "key1=1 key2=3"
 kinds: Configmap
 metadata: 
-  name: My-config
+  name: my-config
