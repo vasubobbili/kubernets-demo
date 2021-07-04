@@ -15,14 +15,14 @@ spec:
   selector: 
     matchLabels: 
       app: redis-deployment
-    strategy: 
-      metadata: 
-        labels: 
-          app: redis-deployment
-        rollingUpdate: 
-          maxSurge: 100%
-          maxUnavailable: 25%
-spec: 
-  containers: ~
+  strategy: 
+    metadata: 
+      labels: 
+        app: redis-deployment
+    rollingUpdate: 
+      maxSurge: 100%
+      maxUnavailable: 25%
+    spec: 
+      containers: ~
     template: ~
     type: RollingUpdates
