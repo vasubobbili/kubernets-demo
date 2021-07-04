@@ -1,28 +1,37 @@
---- 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations: 
+  annotations:
     deployment.kubernetes.io/revision: "1"
-  labels: 
+  labels:
     app: redis-deployment
   name: redis-deployment
-  namespace: mynamespace
-spec: 
+  namespace: default
+spec:
   progressDeadlineSeconds: 600
   replicas: 3
   revisionHistoryLimit: 10
-  selector: 
-    matchLabels: 
+  selector:
+    matchLabels:
       app: redis-deployment
-  strategy: 
-    metadata: 
-      labels: 
-        app: redis-deployment
-    rollingUpdate: 
+  strategy:
+    rollingUpdate:
       maxSurge: 100%
       maxUnavailable: 25%
-  spec: 
-    containers: ~
-  template: ~
-  type: RollingUpdates
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: redis-deployment
+    spec:
+      containers:
+      - name: redisdgess
+        image: redis
+        imagePullPolicy: Never
+        resources:
+          limits:
+            memory: "128Mi"
+        ports:
+        - name: myport
+          containerPort: 7000
+          protocol: TCP
