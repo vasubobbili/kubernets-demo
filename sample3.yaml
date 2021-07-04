@@ -1,4 +1,5 @@
 apiVersion: v2
+kind: Pod
 data: 
   data1: 761
   data2: value"
