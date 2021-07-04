@@ -1,27 +1,28 @@
+--- 
 apiversion: v1
 kind: Deployment
-metadata:
-  annotations:
+metadata: 
+  annotations: 
     deployment.kubernetes.io/revision: "1"
-  labels:
+  labels: 
     app: redis-deployment
   name: redis-deployment
   namespace: mynamespace
-spec:
+spec: 
   progressDeadlineSeconds: 600
   replicas: 3
   revisionHistoryLimit: 10
-  selector:
-    matchLabels:
+  selector: 
+    matchLabels: 
       app: redis-deployment
-  strategy:
-    rollingUpdate:
+  strategy: 
+    metadata: 
+      labels: 
+        app: redis-deployment
+    rollingUpdate: 
       maxSurge: 100%
       maxUnavailable: 25%
+    spec: 
+      containers: ~
+    template: ~
     type: RollingUpdates
-    template:
-    metadata:
-      labels:
-        app: redis-deployment
-    spec:
-      containers:
