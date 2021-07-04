@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: pod
+metaData:
+  name: Pod1
+  labels:
+    app: frontend
+spec:
+  container:
+  - name: nginx
+    image: nginx1909
+    ports:
+    name: nodejs-port
+    containerPort: 0
