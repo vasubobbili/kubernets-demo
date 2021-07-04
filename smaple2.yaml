@@ -6,6 +6,6 @@ spec:
     protocol: TCP
     port: 80
     targetPort: nodejs-ports
-    selectors:
+    selector:
     app: myapp
-  type: mytype
+    type: LoadBalancer
