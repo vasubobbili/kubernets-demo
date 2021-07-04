@@ -1,0 +1,10 @@
+apiVersion: v2
+kinds: Configmap
+metadata:
+  name: My-config
+data:
+  data1: 761
+  data2: value"
+  data3: 
+    key1=1
+    key2=3
